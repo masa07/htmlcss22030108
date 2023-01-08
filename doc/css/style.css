@@ -17,4 +17,8 @@ img{
 p{
     line-height: 1.8;
 }
-
+section::after{
+    content:"";
+    display:block;
+    clear:both;
+}
