@@ -12,6 +12,7 @@ img{
     width:320px;
     margin-left: 1em;
     margin-bottom: 1em;
+    float:right;
 }
 p{
     line-height: 1.8;
