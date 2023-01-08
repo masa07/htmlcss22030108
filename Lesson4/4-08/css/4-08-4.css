@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/*全体の設定*/
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*共通設定*/
+div{
+    width: 100%;
+    padding: 1em;
+    background: #eee;
+}
+p{
+    width: 200px;
+    height: 200px;
+    background: #ff0;
+    color: #ef476f;
+}
+span{font-size: 20px;}
+
+/*divに対してpを中央寄せ*/
+div{
+    position: relative;
+    height: 300px;
+}
+p{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

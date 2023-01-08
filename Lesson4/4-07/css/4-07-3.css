@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+/*テキストを中央寄せ*/
+p{text-align: center;}
+
+
+/*これは効かない*/
+span{text-align: center;}
+

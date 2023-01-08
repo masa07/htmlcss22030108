@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/*ボタンリンクの装飾1*/
+
+a.button-link{
+    background: #ffd700;
+    text-decoration: none;
+    color: #ff4500;
+    font-size: 20px;
+}

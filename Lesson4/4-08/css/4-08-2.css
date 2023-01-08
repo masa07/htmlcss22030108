@@ -1,0 +1,4 @@
+@charset "utf-8";
+
+/*imgタグとspanタグを中央揃え*/
+img,span{vertical-align: middle;}

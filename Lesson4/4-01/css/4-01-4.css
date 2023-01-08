@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+/*モバイル用CSS*/
+@media screen and (max-width:480px) {
+    h2{font-size: 1.1em;}
+    .flex-container{flex-direction:column;}
+    .flex-item{margin: 0 1em 1em;}
+}

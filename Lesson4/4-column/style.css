@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+/*疑似要素*/
+li::before{content:"★";}
+
+/*擬似クラス*/
+li:nth-of-type(even){background: #91d5de;}

@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+/*チェックがついたときの指定*/
+#gnav-input:checked ~ #gnav-btn {background: #1b9aaa url("../img/gnav-btn-close.png") center center no-repeat;}
+#gnav-input:checked ~ #gnav-black {display: block;}
+#gnav-input:checked ~ #gnav-content {left: 0;}

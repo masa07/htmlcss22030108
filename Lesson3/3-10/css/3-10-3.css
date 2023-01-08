@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+*{box-sizing: border-box;}
+
+/*ナビゲーション1*/
+
+ul.gnav-list-1{
+    background: #1b9aaa;
+    padding: 0;
+    text-align: center;
+}
+ul.gnav-list-1 li{
+    display: inline-block;
+}
+
+ul.gnav-list-1 li a {
+    display: block;
+    padding: 1em;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
+ul.gnav-list-1 li a::first-line {
+    font-size: 16px;
+    font-weight: bold;
+}
+ul.gnav-list-1 li a:hover {
+    background: #14727e;
+}

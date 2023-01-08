@@ -1,0 +1,4 @@
+@charset "utf-8";
+
+/*pタグを中央寄せ*/
+p{margin: 0 auto;}

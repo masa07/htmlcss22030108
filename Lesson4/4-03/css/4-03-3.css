@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/*全体の設定*/
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+div{
+    width: 100%;
+    height: 80vh;
+    border: 1px solid #ccc;
+    margin-bottom: 20vh;
+}
+
+/*背景の設定*/
+.bg-001{
+    background: url("../img/bg-cat.png") left bottom no-repeat,
+                url("../img/bg-stripe.png") center center repeat;
+}
+.bg-002{
+    background: url("../img/bg-frame.png") center center repeat,
+                linear-gradient(-135deg, #ffd5c9, #ff6464);
+}

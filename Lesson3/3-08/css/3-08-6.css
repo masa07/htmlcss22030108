@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+/*ボタンリンクの装飾2*/
+
+a.button-link2{
+    background: #1e90ff;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20PX;
+    border-radius: 10px;
+    border-bottom:4px solid #191970;
+}
+
+a.button-link2:active{
+    border-bottom:none;
+    transform:translateY(4px);
+}

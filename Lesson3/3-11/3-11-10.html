@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>テーブルを作ろう</title>
+    <style>
+        table,th,td{
+            border: 1px solid #000;
+            padding: 0.5em;
+        }
+        table{
+            border-spacing: 0;
+            border-collapse:collapse;
+            width: 200px;
+            margin-bottom: 2em;
+        }
+        th{background: #add;}
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th colspan="2">横に結合</th>
+    </tr>
+    <tr>
+        <td>コーヒー</td>
+        <td>紅茶</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th rowspan="2">縦に結合</th>
+        <td>コーヒー</td>
+    </tr>
+    <tr>
+        <td>紅茶</td>
+    </tr>
+</table>
+
+</body>
+</html>

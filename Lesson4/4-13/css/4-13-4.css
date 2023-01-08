@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/*共通設定*/
+div{
+    width: 100px;
+    height: 100px;
+    padding: 1em;
+    margin: 2em 2em 4em;
+    background: #ad4444;
+    color: #fff;
+    font-size: 14px;
+}
+
+/*animationを使ったアニメーション*/
+/*ジグザグに動くアニメーション*/
+.sample1{animation: zigzag 2s ease 0s 3 normal;}
+/*zigzagのキーフレームを定義*/
+@keyframes zigzag {
+    0%{transform: translate(0,0);}
+    50%{transform: translate(50px,50px);}
+    100%{transform: translate(100px,0px);}
+}
+
+
+/*大きさと色が変わるアニメーション*/
+.sample2{animation: scale-and-color 4s ease 0s infinite alternate;}
+/*scale-and-colorのキーフレームを定義*/
+@keyframes scale-and-color {
+    0%{
+        background: #ad4444;
+        transform: scale(1);
+    }
+    50%{
+        background: #3946ad;
+        transform: scale(1.5);
+    }
+    100%{
+        background: #4dad48;
+        transform: scale(1);
+    }
+}
+
+/*ローディングアニメーション*/
+img{
+    width: 100px;
+    margin-right: 2em;
+}
+
+.sample3{animation: loading 1s linear 0s infinite;}
+/*キーフレーム*/
+@keyframes loading {
+    0% {transform: rotate(0deg);}
+    30% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+
+/*鼓動しているようなアニメーション*/
+.sample4{animation: heart .8s ease 0s infinite normal;}
+/*キーフレーム*/
+@keyframes heart {
+    0% {transform: scale(1);}
+    8% {transform: scale(1);}
+    15% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}

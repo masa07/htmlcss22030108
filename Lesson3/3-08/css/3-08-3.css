@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/*共通設定のCSS*/
+
+a{
+    display: block;
+    width: 200px;
+    margin: 40px auto;
+    padding: 1em;
+    text-align: center;
+}
+@media screen and (min-width: 960px){
+    a:hover{
+        opacity:0.7;
+    }
+}

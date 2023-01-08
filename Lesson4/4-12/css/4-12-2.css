@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/*全体の設定*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*メニューの中身*/
+#gnav-content {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 100;
+    width: 100%;
+    max-width: 240px;
+    box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+ul.gnav-list{
+    background: #1b9aaa;
+    padding: 0;
+    height: 100vh;
+    text-align: center;
+}
+ul.gnav-list li{display: block;}
+
+ul.gnav-list li a {
+    display: block;
+    padding: 1.5em;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
+ul.gnav-list li a::first-line {
+    font-size: 16px;
+    font-weight: bold;
+}

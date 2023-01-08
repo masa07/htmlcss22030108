@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/* header全体を画面に固定する */
+header{
+    position: fixed;
+    top:0;
+    left:0;
+}
+
+/* その他の設定 */
+main{
+    margin-top: 60px;
+}
+
+main div{
+    background: #eee;
+    height: 80vh;
+    width: 90%;
+    margin:0 auto 40px;
+}

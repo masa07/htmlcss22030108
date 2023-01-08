@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/*全体の設定*/
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*レイアウト*/
+body{background: #eee;}
+h1{
+    font-size: 1.5em;
+    color: #1b9aaa;
+    text-align: center;
+    margin: 40px 0 20px;
+}
+form{
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    background: #fff;
+    padding: 40px 0;
+}
+dl{
+    margin: 0 auto;
+    width: 500px;
+}
+.form-item{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+dt{width: 200px;}
+dd{width: 300px;}
+input[type="text"], input[type="email"], select, textarea{
+    display: block;
+    width: 100%;
+    font-size: 16px;
+}
+.form-submit{text-align: center;}
+
+/*モバイル用CSS*/
+@media screen and (max-width:768px) {
+    form{padding: 20px 0;}
+    dl{width: 90%;}
+    .form-item{display: block;}
+    dt{width: 100%;}
+    dd{width: 100%;}
+}
