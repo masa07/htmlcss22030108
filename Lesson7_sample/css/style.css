@@ -1,0 +1,596 @@
+@charset "utf-8";
+/*----------------------------
+このCSSファイルに、スタイル指定を記述していきます。
+----------------------------*/
+
+/* 全体のスタイル調整 */
+* {
+  box-sizing: border-box;
+}
+
+/* bodyの初期スタイル調整 */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Noto Sans JP', 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #333;
+  background-color: #fff;
+}
+
+/* 初期スタイル調整 */
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+h3 {
+  color: #85a7cc;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  text-align: justify;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+ul {
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 60px 0;
+}
+
+/* 初期スタイル調整 ここまで */
+
+/* 共通スタイル調整 ここから */
+
+/*h2関連*/
+.h2-title {
+  position: relative;
+  text-transform: uppercase;
+  z-index: 100;
+}
+
+.h2-title::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #a5d1ff;
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  transform: rotate(45deg);
+  z-index: -100;
+}
+
+/*テキスト関連*/
+.txt-center {
+  text-align: center;
+}
+
+.txt-lead {
+  font-weight: 700;
+}
+
+/*ボタン関連*/
+.btn {
+  display: block;
+  padding: 20px 35px;
+  border-radius: 8px;
+  margin: 0 auto;
+  border: none;
+}
+
+.btn:hover,
+.btn:focus {
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+/*Web予約ボタン*/
+.btn-reserve {
+  color: #fff;
+  background: #6699ff;
+}
+
+/*レイアウト関連*/
+.inner {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width:768px) {
+  .inner {
+    max-width: 1200px;
+  }
+}
+
+.sp-only {
+  display: block;
+}
+
+.pc-only {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .sp-only {
+    display: none;
+  }
+
+  .pc-only {
+    display: block;
+  }
+}
+
+
+
+/* 共通スタイル調整 ここまで */
+
+/* ヘッダーブロック ここから */
+.header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 200;
+}
+
+.header-logo-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*ロゴ*/
+.logo-area {
+  width: 200px;
+  margin: 0;
+  text-align: left;
+}
+
+@media screen and (min-width:768px) {
+  .logo-area {
+    width: 250px;
+  }
+}
+
+/*ハンバーガーメニュー*/
+.gnav-toggle {
+  position: relative;
+  margin-top: 12px;
+}
+
+
+/*チェックボックス等は非表示に*/
+.gnav-hidden {
+  display: none;
+}
+
+/*アイコンのスペース*/
+#gnav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+/*ハンバーガーの形をCSSで表現*/
+#gnav-open span,
+#gnav-open span::before,
+#gnav-open span::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  /*線の太さ*/
+  width: 25px;
+  /*長さ*/
+  border-radius: 3px;
+  background: #555;
+  display: block;
+  cursor: pointer;
+}
+
+#gnav-open span::before {
+  bottom: -8px;
+}
+
+#gnav-open span::after {
+  bottom: -16px;
+}
+
+/*閉じる用の薄黒箇所*/
+#gnav-close {
+  display: none;
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+/*チェックがついたら表示させる*/
+#gnav-input:checked ~ #gnav-close {
+  display: block;
+  opacity: 0.5;
+}
+
+#gnav-input:checked ~ #gnav-content {
+  transform: translateX(0%);
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+/*メニューの中身*/
+#gnav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  transition: 0.3s ease-in-out;
+  transform: translateX(-105%);
+}
+
+.gnav-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  text-transform: uppercase;
+}
+
+
+.gnav-item {
+  border-bottom: 2px dotted #eee;
+  margin: 10px;
+  padding-bottom: 20px;
+}
+
+.gnav-item a {
+  color: #fff;
+  font-size: 12px;
+  display: block;
+  width: 200px;
+  text-align: center;
+}
+
+.gnav-item a::first-line {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media screen and (min-width:768px) {
+  .gnav-menu {
+    flex-direction: row;
+    padding-top: 15px;
+    margin: 0;
+  }
+
+  .gnav-item {
+    border-bottom: none;
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  .gnav-item a {
+    color: #333;
+    width: 120px;
+  }
+
+  .gnav-item a:hover {
+    color: #85a7cc;
+  }
+
+
+}
+
+
+
+
+
+
+/*-------------------------------------------
+　メインビジュアル
+-------------------------------------------*/
+.mv-area {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mv-title {
+  color: #fff;
+  text-shadow: 0px 0px 3px #333;
+  margin-top: 70px;
+}
+
+@media screen and (min-width:768px) {
+  .mv-area {
+    width: 100%;
+    height: 600px;
+  }
+
+  .mv-title {
+    margin-top: 90px;
+  }
+}
+
+
+
+
+
+/*-------------------------------------------
+　レンタルスペースの紹介
+-------------------------------------------*/
+.info-area {
+  background-color: #85a7cc;
+}
+
+.info-txt {
+  color: #fff;
+}
+
+
+@media screen and (min-width:768px) {
+  .info-content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .info-txt {
+    flex: 1;
+    margin-left: 30px;
+  }
+
+  .info-area img {
+    flex: 1
+  }
+}
+
+/*-------------------------------------------
+　サービスの案内
+-------------------------------------------*/
+.service-area {
+  background-color: #fff;
+}
+
+.service-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  flex: 40%;
+  text-align: center;
+  padding: 20px 20px 0;
+  margin: 5px;
+  border: 3px solid #527acc;
+  border-radius: 10px;
+}
+
+.service-item img {
+  width: 120px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width:768px) {
+  .service-content {
+    flex-wrap: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .service-item {
+    flex: 1;
+  }
+
+}
+
+
+/*-------------------------------------------
+　プランの紹介
+-------------------------------------------*/
+.plan-area {
+  background-color: #f0f0f0;
+}
+
+.plan-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-item {
+  background-color: #fff;
+  margin-bottom: 30px;
+  box-shadow: 1px 1px 3px #aaa;
+}
+
+.plan-info {
+  padding: 0 15px 15px;
+}
+
+.plan-title {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #527acc;
+}
+
+.plan-price {
+  text-align: center;
+  padding: 10px;
+  border: 2px solid #527acc;
+}
+
+.plan-list li::before {
+  content: "";
+  background: url(../img/list-marker.svg) no-repeat;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 3px;
+}
+
+@media screen and (min-width:768px) {
+  .plan-content {
+    flex-direction: row;
+  }
+
+  .plan-item {
+    flex: 1;
+    margin-top: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+/*-------------------------------------------
+　アクセス
+-------------------------------------------*/
+.access-area {
+  padding-bottom: 0;
+}
+
+.access-area img {
+  display: block;
+  max-width: 280px;
+  max-height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 10px auto 30px;
+}
+
+.access-maparea {
+  position: relative;
+  padding-top: 100%;
+}
+
+.access-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width:768px) {
+  .access-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 150px;
+  }
+
+  .access-maparea {
+    position: relative;
+    padding-top: 30%;
+  }
+
+}
+
+
+/*-------------------------------------------
+　ページトップ
+-------------------------------------------*/
+.pagetop {
+  text-align: right;
+  padding: 15px;
+  background-color: #f0f0f0;
+}
+
+.pagetop a::after {
+  content: "";
+  background: url(../img/list-marker.svg) no-repeat;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 3px 10px;
+  transform: rotate(-90deg);
+}
+
+
+/*-------------------------------------------
+　フッター
+-------------------------------------------*/
+.foot-area {
+  color: #fff;
+  text-align: center;
+  padding-top: 40px;
+  background-color: #596680;
+}
+
+.foot-logo {
+  margin: 0 auto 20px;
+}
+
+.text-phone,
+.text-phone a {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+}
+
+.foot-area_copy {
+  color: #ccc;
+  font-size: 12px;
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+}
+
+@media screen and (min-width:768px) {
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+}

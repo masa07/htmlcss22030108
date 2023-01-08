@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- レスポンシブ対応するための記述 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- 電話番号の自動リンクを無効にする -->
+  <meta name="format-detection" content="telephone=no">
+  <title>rental space MdN</title>
+  <meta name="description" content="レンタルスペースMdNの公式ホームページです。">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Open+Sans:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header-logo-menu">
+      <div class="logo-area">
+        <a href="./index.html">
+          <img src="img/site-logo_bk.svg" alt="rental space MdN">
+        </a>
+      </div>
+      <nav class="sp-only">
+        <div class="gnav-toggle">
+          <input id="gnav-input" type="checkbox" class="gnav-hidden">
+          <label id="gnav-open" for="gnav-input"><span></span></label>
+          <label class="gnav-unshown" id="gnav-close" for="gnav-input"></label>
+          <div id="gnav-content">
+            <ul class="gnav-menu">
+              <li class="gnav-item">
+                <a href="#service">Service<br>サービス</a>
+              </li>
+              <li class="gnav-item">
+                <a href="#plan">Plan<br>プラン</a>
+              </li>
+              <li class="gnav-item">
+                <a href="#access">Access<br>アクセス</a>
+              </li>
+              <li class="gnav-item">
+                <a href="#contact">Contact<br>コンタクト</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="pc-only">
+        <ul class="gnav-menu">
+          <li class="gnav-item">
+            <a href="#service">Service<br>サービス</a>
+          </li>
+          <li class="gnav-item">
+            <a href="#plan">Plan<br>プラン</a>
+          </li>
+          <li class="gnav-item">
+            <a href="#access">Access<br>アクセス</a>
+          </li>
+          <li class="gnav-item">
+            <a href="#contact">Contact<br>コンタクト</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <section id="mv" class="mv-area">
+      <h1 class="mv-title">気軽に利用できる<br class="sp-only">レンタルスペース</h1>
+      <button type="button" onclick="location.href='#'" class="btn btn-reserve">Web予約はこちら</button>
+    </section>
+
+    <section id="info" class="info-area">
+      <div class="inner info-content">
+        <div class="info-txt">
+          <h2>利用人数や目的に<br class="sp-only">合わせて選べます</h2>
+          <p>レンタルスペースL7では、利用人数や利用目的に合わせてお部屋のタイプやご利用プランを選ぶことができます。少人数のミーティングから、100人規模のセミナーまで広く取り扱っております。<br>
+            見学やご相談も承っておりますので、まずは、お気軽にお問い合わせください。</p>
+        </div>
+        <img src="img/img-info.jpg" alt="レンタルスペースMdNロビーの写真">
+      </div>
+    </section>
+
+    <section id="service" class="service-area">
+      <div class="inner">
+        <h2 class="h2-title">Service</h2>
+        <h3>サービス</h3>
+        <p class="txt-center">すべてのプランに標準でご利用いただけるサービスです。<br class="pc-only">
+          その他にも会議に必要な備品など数多く取り揃えておりますので申し込み時にお問い合わせください。</p>
+      </div>
+      <ul class="service-content">
+        <li class="service-item">
+          <img src="img/service-icon_01.svg" alt="Free Wi-Fi">
+          <h4>Free Wi-Fi</h4>
+          <p>無料のWi-Fiを完備しております。ご自由にご利用ください。 </p>
+        </li>
+        <li class="service-item">
+          <img src="img/service-icon_02.svg" alt="収録サービス">
+          <h4>収録サービス</h4>
+          <p>会議内容を収録できます。ボイスレコーダーの貸し出しになります。</p>
+        </li>
+        <li class="service-item">
+          <img src="img/service-icon_03.svg" alt="ホワイトボード">
+          <h4>ホワイトボード</h4>
+          <p>プリント可能なホワイトボードを各部屋に設置しています。</p>
+        </li>
+        <li class="service-item">
+          <img src="img/service-icon_04.svg" alt="ドリンクサービス">
+          <h4>ドリンクサービス</h4>
+          <p>ロビーのドリンクバーをご利用いただけます。</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="plan" class="plan-area">
+      <div class="inner">
+        <h2 class="h2-title">Plan</h2>
+        <h3>ご利用プラン</h3>
+        <p class="txt-center">ご利用人数や利用目的に合わせて、<br class="sp-only">様々なプランをご用意しております。</p>
+        <ul class="plan-content">
+          <li class="plan-item">
+            <img src="img/img-plan_01.jpg" alt="ミーティングプラン">
+            <div class="plan-info">
+              <h4 class="plan-title">ミーティングプラン</h4>
+              <p>少人数のミーティング向けプランです。全室、外が見える開放感あるお部屋で、30分からのご利用が可能です。</p>
+              <ul class="plan-list">
+                <li>2〜6人でのご利用</li>
+                <li>モニター</li>
+              </ul>
+              <p class="plan-price">3,000円／30分〜</p>
+            </div>
+          </li>
+          <li class="plan-item">
+            <img src="img/img-plan_02.jpg" alt="会議室プラン">
+            <div class="plan-info">
+              <h4 class="plan-title">会議室プラン</h4>
+              <p>PCの投影が出来るワイドモニター付きのプランです。プレゼンテーションやレッスンなどでもご利用いただけます。</p>
+              <ul class="plan-list">
+                <li>4〜10人でのご利用</li>
+                <li>50インチモニター</li>
+              </ul>
+              <p class="plan-price">20,000円／60分〜</p>
+            </div>
+          </li>
+          <li class="plan-item">
+            <img src="img/img-plan_03.jpg" alt="セミナープラン">
+            <div class="plan-info">
+              <h4 class="plan-title">セミナープラン</h4>
+              <p>大人數対応のプランです。パーティションで区切ることが出来ますので、利用人数でお部屋の大きさが変わります。</p>
+              <ul class="plan-list">
+                <li>30〜100人でのご利用</li>
+                <li>プロジェクター</li>
+              </ul>
+              <p class="plan-price">60,000円／60分〜</p>
+            </div>
+          </li>
+
+        </ul>
+        <button type="button" onclick="location.href='#'" class="btn btn-reserve">Web予約はこちら</button>
+      </div>
+    </section>
+
+    <section id="access" class="access-area">
+      <div class="inner">
+        <h2 class="h2-title">Access</h2>
+        <h3>アクセス</h3>
+        <div class="access-content">
+          <div>
+            <p class="txt-lead">電車でお越しの場合</p>
+            <p>神保町駅 徒歩5分<br>
+              神保ビルの3Fが受付になります。<br>
+              北口から商店街をまっすぐ抜け、市役所を左折。徒歩5分。</p>
+          </div>
+          <img src="img/img-access.jpg" alt="神保ビル">
+        </div>
+      </div>
+      <!--GoogleMap-->
+      <div class="access-maparea">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.2991058333905!2d139.7580929152592!3d35.69425648019131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c1049646ffb%3A0x7abe3f67bddf1a86!2z44CSMTAxLTAwNTEg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy656We55Sw56We5L-d55S677yR5LiB55uu77yR77yQ77yV!5e0!3m2!1sja!2sjp!4v1571363870983!5m2!1sja!2sjp" width="800" height="400" frameborder="0" style="border:0;" allowfullscreen="" class="access-map"></iframe>
+      </div>
+      <!--/GoogleMap-->
+    </section>
+
+    <div class="pagetop">
+      <a href="#mv">ページトップ</a>
+    </div>
+  </main>
+  <footer class="foot-area">
+    <div class="inner">
+      <div class="logo-area foot-logo">
+        <img src="img/site-logo_w.svg" alt="rental space MdN">
+      </div>
+      <p class="txt-center">見学やセミナーのご相談など<br class="sp-only">お気軽にご連絡ください。</p>
+      <address class="text-phone">TEL：<a href="tel:00-1234-5678">00-1234-5678</a></address>
+    </div>
+    <small class="foot-area_copy">&copy; MdN Corporation.</small>
+  </footer>
+</body></html>
